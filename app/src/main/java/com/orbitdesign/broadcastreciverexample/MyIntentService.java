@@ -28,10 +28,16 @@ public class MyIntentService extends IntentService {
         builder.setContentTitle("Content Title");
         builder.setContentText("Content Text");
         builder.setSubText("Sub text");
+        builder.setContentInfo("Content Info");
+        builder.setStyle(
+                new NotificationCompat
+                        .BigTextStyle()
+                        .bigText("Some larger message that is shown to the user\nLine 2\nLine 3 \n Line 4\n Line 5"));
         builder.setAutoCancel(false);
         builder.setOngoing(false);
         builder.setColor(Color.MAGENTA);
-        builder.setSmallIcon(R.drawable.abc_ic_search_api_mtrl_alpha);
+        builder.setSmallIcon(R.drawable.my_icon_airplanemode);
+        builder.setWhen(0);
 
         Intent notifIntent = new Intent(this, MainActivity.class);
 
