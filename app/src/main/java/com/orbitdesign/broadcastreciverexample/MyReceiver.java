@@ -21,6 +21,6 @@ public class MyReceiver extends BroadcastReceiver {
         }
 
         Toast.makeText(context, "Broadcast Received "+intent.getAction(), Toast.LENGTH_LONG).show();
-
+        context.startService(new Intent(context, MyIntentService.class));
     }
 }
